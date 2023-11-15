@@ -1,0 +1,232 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.body{
+  overflow: hidden;
+}
+.title-container {
+  text-align: center;
+  display: grid;
+    justify-items: center;
+    align-items: center;
+    height: auto !important;
+
+}
+
+.title-text {
+  font-size: 7rem;
+  color: #fff;
+  text-transform: uppercase;
+  animation: vibrate 0.3s infinite;
+}
+h1 {
+  font-family: Arial, sans-serif; /* Cambia la fuente según tus preferencias */
+  font-size: 3rem; /* Tamaño del título */
+  font-weight: bold; /* Peso de la fuente */
+  font-style: italic; /* Estilo de la fuente */
+  color: #333; /* Color del texto */
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
+button {
+margin-top: 50px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1900ff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s, background-color 0.4s, transform 0.4s;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s, opacity 0.4s;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+button:hover {
+  color:#1900ff;
+  background-color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.logo{
+  width:384px;
+  margin-top: 50px;
+}
+.lin{
+  width: 50px;
+}
+.git{
+  width: 85px;
+}
+.l-footer{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-container {
+    width: 100vw;
+    height: 635px;
+    position: relative;
+    background-color: #f0f0f0;
+    background-image: url(https://s1.1zoom.me/b5050/50/434219-Kycb_1920x1080.jpg);
+    overflow: hidden;
+  }
+  .box{
+    display: flex;
+    justify-content: center;
+    -webkit-text-stroke-width: medium;
+  }
+  .score-message{
+    color: green;
+    font-size: xx-large;
+  }
+  .game-info {
+   
+    color: #ffffff;
+    margin: 50px;
+
+  }
+  /* Estilos base */
+.game-info {
+  width: 300px;
+  height: 100px;
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
+  perspective: 1000px; /* Agrega perspectiva para efecto 3D */
+
+  user-select: none; /* Evitar que el texto se pueda seleccionar */
+  pointer-events: none; /* Evitar eventos de puntero (como clics) en el elemento */
+}
+
+/* Efecto 3D al pasar el cursor */
+.game-info:hover {
+  transform-style: preserve-3d;
+  transform: rotateY(10deg) rotateX(10deg); /* Rotación en los ejes Y y X */
+  transition: transform 0.5s ease; /* Agrega una transición suave */
+}
+
+/* Estilos para títulos y texto */
+.game-info{
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.game-info {
+  font-size: 16px;
+}
+
+  .ball {
+    width: 40px;
+    height: 40px;
+background-image: url(https://png.pngtree.com/png-clipart/20190705/original/pngtree-burning-ball-fire-png-png-image_4199199.jpg);    
+background-position: center;
+border-radius: 50%;
+    position: absolute;
+    transition: transform 0.2s; 
+  }
+  
+  .palo {
+    width: 150px;
+    height: 20px;
+    background-color: blue;
+    position: absolute;
+    bottom: 10px; 
+    transition: transform 0.2s; }
+
+
+
+
+
+@media (max-width: 390px){
+ .game-info{
+  height:55px ;
+ }
+  .game-container {
+    position: relative;
+    width: 390px; /* Ajusta según tus necesidades */
+    height: 844px; 
+    border: 1px solid #ccc;
+    overflow: hidden;
+  }
+  
+  .ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .palo {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: blue;
+  }
+  
+  .score-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  .game-info {
+    top: 100px;
+    left: 86px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000000;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+.title-text{
+  font-size: 3rem;
+}  
+}
+
